@@ -33,6 +33,7 @@ public class EmergenciaService {
         if(inicio == null || fin == null){
             return this.emergenciaRepository.getAll();
         }
+        System.out.println("Se esta ejecutando lo de afuera");
         return emergenciaRepository.getBetweenDates(inicio, fin);
     }
 

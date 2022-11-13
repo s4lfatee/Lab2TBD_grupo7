@@ -74,8 +74,8 @@ public class VoluntarioRepositoryImp implements VoluntarioRepository {
 
     @Override
     public List<Voluntario> getByMinScore(int id){
-        final String query = "SELECT v.id, v.nombre, v.fnacimiento, ST_X(v.location) AS longitud, ST_Y(v.location) AS latitud  FROM voluntario AS v" +
-                "(SELECT r.id_voluntario, min(r.puntaje) FROM ranking) AS r WHERE r.id_voluntario = v.id";
+        final String query = "SELECT v.id, v.nombre, v.fnacimiento, ST_X(v.location) AS longitud, ST_Y(v.location) AS latitud  FROM voluntario AS v," +
+                "(SELECT * FROM ranking AS r WHERE r.id_tarea = :id ORDER BY r.puntaje ASC LIMIT 1) AS r WHERE r.id_voluntario = v.id";
         try(Connection conn = sql2o.open()){
             return conn.createQuery(query)
                     .addParameter("id",id)

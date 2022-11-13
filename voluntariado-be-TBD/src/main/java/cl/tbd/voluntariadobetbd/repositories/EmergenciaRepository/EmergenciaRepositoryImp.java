@@ -16,7 +16,7 @@ public class EmergenciaRepositoryImp implements EmergenciaRepository{
 
     @Override
     public List<Emergencia> getAll(){
-        final String query = "SELECT e.id, e.nombre, e.descrip, e.finicio, e.Date, e.id_institucion, ST_Y(e.location) AS latitud, ST_X(e.location) AS longitud FROM emergencia AS e";
+        final String query = "SELECT e.id, e.nombre, e.descrip, e.finicio, e.ffin, e.id_institucion, ST_Y(e.location) AS latitud, ST_X(e.location) AS longitud FROM emergencia AS e";
         try(Connection conn = sql2o.open()){
             return conn.createQuery(query).executeAndFetch(Emergencia.class);
         }catch(Exception e){
@@ -27,7 +27,7 @@ public class EmergenciaRepositoryImp implements EmergenciaRepository{
 
     @Override
     public List<Emergencia> getNearBy(int id){
-        final String query = "SELECT e.id, e.nombre, e.descrip, e.finicio, e.Date, e.id_institucion, ST_Y(e.location) AS latitud, ST_X(e.location) AS longitud FROM voluntario AS v, division_regional AS r, emergencia as e WHERE ST_WITHIN(v.\"location\", r.geom) AND v.id= :id AND ST_WITHIN(e.\"location\", r.geom)";
+        final String query = "SELECT e.id, e.nombre, e.descrip, e.finicio, e.ffin, e.id_institucion, ST_Y(e.location) AS latitud, ST_X(e.location) AS longitud FROM voluntario AS v, division_regional AS r, emergencia as e WHERE ST_WITHIN(v.\"location\", r.geom) AND v.id= :id AND ST_WITHIN(e.\"location\", r.geom)";
         try(Connection conn = sql2o.open()){
             return conn.createQuery(query)
                     .addParameter("id",id)
@@ -40,7 +40,7 @@ public class EmergenciaRepositoryImp implements EmergenciaRepository{
 
     @Override
     public List<Emergencia> getBetweenDates(Date inicio, Date fin){
-        final String query = "SELECT e.id, e.nombre, e.descrip, e.finicio, e.Date, e.id_institucion, ST_Y(e.location) AS latitud, ST_X(e.location) AS longitud FROM emergencia AS e WHERE :finicio BETWEEN e.finicio AND e.inicio AND :ffinal BETWEEN e.finicio AND e.inicio";
+        final String query = "SELECT e.id, e.nombre, e.descrip, e.finicio, e.ffin, e.id_institucion, ST_Y(e.location) AS latitud, ST_X(e.location) AS longitud FROM emergencia AS e WHERE :finicio < e.finicio AND :ffinal > e.ffin";
         try(Connection conn = sql2o.open()){
             return conn.createQuery(query)
                     .addParameter("finicio",inicio)
@@ -55,7 +55,7 @@ public class EmergenciaRepositoryImp implements EmergenciaRepository{
     @Override
     public Emergencia getById(int id){
         try(Connection conn = sql2o.open()){
-            return conn.createQuery("SELECT e.id, e.nombre, e.descrip, e.finicio, e.Date, e.id_institucion, ST_Y(e.location) AS latitud, ST_X(e.location) AS longitud FROM emergencia AS e WHERE e.id = :id")
+            return conn.createQuery("SELECT e.id, e.nombre, e.descrip, e.finicio, e.ffin, e.id_institucion, ST_Y(e.location) AS latitud, ST_X(e.location) AS longitud FROM emergencia AS e WHERE e.id = :id")
                     .addParameter("id",id)
                     .executeAndFetchFirst(Emergencia.class);
         }catch(Exception e){

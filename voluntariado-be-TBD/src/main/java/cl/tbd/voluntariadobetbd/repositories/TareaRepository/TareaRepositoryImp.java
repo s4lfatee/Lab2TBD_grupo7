@@ -67,7 +67,7 @@ public class TareaRepositoryImp implements TareaRepository {
 
     @Override
     public List<Tarea> getByIdEmergency(int id){
-        final String query = "SELECT * FROM emergency AS e WHERE e.id_emergencia = :id";
+        final String query = "SELECT * FROM tarea AS t WHERE t.id_emergencia = :id";
         try(Connection conn = sql2o.open()){
             return conn.createQuery(query)
                     .addParameter("id", id)

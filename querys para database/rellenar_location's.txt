@@ -1,0 +1,7 @@
+UPDATE emergencia SET "location"=puntos.geom FROM (SELECT DISTINCT ON (idtable.id) id, RandomPointsInPolygon(ch.st_union, 6) as geom FROM 
+                                  (SELECT * FROM generate_series(0, 1000) as id) as idtable, chile as ch) as puntos
+                                  WHERE emergencia.id=puntos.id
+
+UPDATE voluntario SET "location"=puntos.geom FROM (SELECT DISTINCT ON (idtable.id) id, RandomPointsInPolygon(ch.st_union, 6) as geom FROM 
+                                  (SELECT * FROM generate_series(0, 1000) as id) as idtable, chile as ch) as puntos
+                                  WHERE voluntario.id=puntos.id
