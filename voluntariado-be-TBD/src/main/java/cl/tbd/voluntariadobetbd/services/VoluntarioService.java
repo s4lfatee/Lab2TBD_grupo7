@@ -27,8 +27,8 @@ public class VoluntarioService {
         return voluntarioRepository.getById(id);
     }
 
-    @GetMapping("/min/{id}")
-    public List<Voluntario> getByMinScoreByIdTask(@PathVariable("id") int id){
+    @GetMapping("/min/{idTask}")
+    public List<Voluntario> getByMinScoreByIdTask(@PathVariable("idTask") int id){
         return voluntarioRepository.getByMinScore(id);
     }
     @GetMapping()

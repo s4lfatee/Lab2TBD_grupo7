@@ -17,7 +17,7 @@ public class VoluntarioRepositoryImp implements VoluntarioRepository {
 
     @Override
     public Voluntario getByName(String name){
-        String query = "SELECT * FROM voluntario WHERE voluntario.nombre = :name";
+        String query = "SELECT v.id, v.nombre, v.fnacimiento, ST_X(v.location) AS longitud, ST_Y(v.location) AS latitud  FROM voluntario AS v WHERE v.nombre = :name";
         try(Connection conn = sql2o.open()){
             return conn.createQuery(query)
             .addParameter("name", name)
@@ -30,7 +30,7 @@ public class VoluntarioRepositoryImp implements VoluntarioRepository {
 
     @Override
     public Voluntario getById(int id){
-        String query = "SELECT * FROM volunteer WHERE voluntario.id = :id";
+        String query = "SELECT v.id, v.nombre, v.fnacimiento, ST_X(v.location) AS longitud, ST_Y(v.location) AS latitud  FROM voluntario AS v WHERE v.id = :id";
         try(Connection conn = sql2o.open()){
             return conn.createQuery(query)
             .addParameter("id", id)
@@ -43,7 +43,7 @@ public class VoluntarioRepositoryImp implements VoluntarioRepository {
 
     @Override
     public List<Voluntario> getAll(){
-        String query = "SELECT * FROM voluntario";
+        String query = "SELECT v.id, v.nombre, v.fnacimiento, ST_X(v.location) AS longitud, ST_Y(v.location) AS latitud  FROM voluntario AS v";
         try(Connection conn = sql2o.open()){
             return conn.createQuery(query)
                     .executeAndFetch(Voluntario.class);
@@ -74,8 +74,8 @@ public class VoluntarioRepositoryImp implements VoluntarioRepository {
 
     @Override
     public List<Voluntario> getByMinScore(int id){
-        final String query = "SELECT vol.id, vol.nombre, vol.fnacimiento, vol.latitud, vol.longitud FROM voluntario AS vol" +
-                "(SELECT r.id_voluntario, min(r.puntaje) FROM ranking) AS r WHERE r.id_voluntario = vol.id";
+        final String query = "SELECT v.id, v.nombre, v.fnacimiento, ST_X(v.location) AS longitud, ST_Y(v.location) AS latitud  FROM voluntario AS v" +
+                "(SELECT r.id_voluntario, min(r.puntaje) FROM ranking) AS r WHERE r.id_voluntario = v.id";
         try(Connection conn = sql2o.open()){
             return conn.createQuery(query)
                     .addParameter("id",id)
