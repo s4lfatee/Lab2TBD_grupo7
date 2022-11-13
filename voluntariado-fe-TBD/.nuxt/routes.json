@@ -1,0 +1,44 @@
+[
+  {
+    "name": "get",
+    "path": "/get",
+    "component": "C:\\\\Users\\\\Alex\\\\Desktop\\\\usach\\\\Semestre 6\\\\Taller de Base de Datos\\\\Lab\\\\voluntariado-TBD\\\\voluntariado-fe-TBD\\\\pages\\\\get.vue",
+    "chunkName": "pages/get"
+  },
+  {
+    "name": "get_tasks",
+    "path": "/get_tasks",
+    "component": "C:\\\\Users\\\\Alex\\\\Desktop\\\\usach\\\\Semestre 6\\\\Taller de Base de Datos\\\\Lab\\\\voluntariado-TBD\\\\voluntariado-fe-TBD\\\\pages\\\\get_tasks.vue",
+    "chunkName": "pages/get_tasks"
+  },
+  {
+    "name": "inspire",
+    "path": "/inspire",
+    "component": "C:\\\\Users\\\\Alex\\\\Desktop\\\\usach\\\\Semestre 6\\\\Taller de Base de Datos\\\\Lab\\\\voluntariado-TBD\\\\voluntariado-fe-TBD\\\\pages\\\\inspire.vue",
+    "chunkName": "pages/inspire"
+  },
+  {
+    "name": "login",
+    "path": "/login",
+    "component": "C:\\\\Users\\\\Alex\\\\Desktop\\\\usach\\\\Semestre 6\\\\Taller de Base de Datos\\\\Lab\\\\voluntariado-TBD\\\\voluntariado-fe-TBD\\\\pages\\\\login.vue",
+    "chunkName": "pages/login"
+  },
+  {
+    "name": "post",
+    "path": "/post",
+    "component": "C:\\\\Users\\\\Alex\\\\Desktop\\\\usach\\\\Semestre 6\\\\Taller de Base de Datos\\\\Lab\\\\voluntariado-TBD\\\\voluntariado-fe-TBD\\\\pages\\\\post.vue",
+    "chunkName": "pages/post"
+  },
+  {
+    "name": "put",
+    "path": "/put",
+    "component": "C:\\\\Users\\\\Alex\\\\Desktop\\\\usach\\\\Semestre 6\\\\Taller de Base de Datos\\\\Lab\\\\voluntariado-TBD\\\\voluntariado-fe-TBD\\\\pages\\\\put.vue",
+    "chunkName": "pages/put"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "C:\\\\Users\\\\Alex\\\\Desktop\\\\usach\\\\Semestre 6\\\\Taller de Base de Datos\\\\Lab\\\\voluntariado-TBD\\\\voluntariado-fe-TBD\\\\pages\\\\index.vue",
+    "chunkName": "pages/index"
+  }
+]
