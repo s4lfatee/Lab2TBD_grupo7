@@ -3,6 +3,7 @@ package cl.tbd.voluntariadobetbd.services;
 import cl.tbd.voluntariadobetbd.models.Emergencia;
 import cl.tbd.voluntariadobetbd.repositories.EmergenciaRepository.EmergenciaRepository;
 
+import org.springframework.lang.Nullable;
 import org.springframework.web.bind.annotation.*;
 import java.sql.Date;
 import java.util.Map;
@@ -31,6 +32,7 @@ public class EmergenciaService {
     @GetMapping()
     public List<Emergencia> getAll(@RequestParam(required = false) Date inicio, @RequestParam(required = false) Date fin){
         if(inicio == null || fin == null){
+            System.out.println("no hay fechas");
             return this.emergenciaRepository.getAll();
         }
         System.out.println("Se esta ejecutando lo de afuera");

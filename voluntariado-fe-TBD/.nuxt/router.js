@@ -4,13 +4,14 @@ import { normalizeURL, decode } from 'ufo'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
-const _632a810a = () => interopDefault(import('..\\pages\\get.vue' /* webpackChunkName: "pages/get" */))
-const _0e0b6299 = () => interopDefault(import('..\\pages\\get_tasks.vue' /* webpackChunkName: "pages/get_tasks" */))
-const _17fd948e = () => interopDefault(import('..\\pages\\inspire.vue' /* webpackChunkName: "pages/inspire" */))
-const _29c6eec6 = () => interopDefault(import('..\\pages\\login.vue' /* webpackChunkName: "pages/login" */))
-const _87d936c8 = () => interopDefault(import('..\\pages\\post.vue' /* webpackChunkName: "pages/post" */))
-const _5a902043 = () => interopDefault(import('..\\pages\\put.vue' /* webpackChunkName: "pages/put" */))
-const _2174e586 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
+const _7653fe3a = () => interopDefault(import('..\\pages\\get.vue' /* webpackChunkName: "pages/get" */))
+const _96e3886e = () => interopDefault(import('..\\pages\\get_tasks.vue' /* webpackChunkName: "pages/get_tasks" */))
+const _52c4f9be = () => interopDefault(import('..\\pages\\inspire.vue' /* webpackChunkName: "pages/inspire" */))
+const _4c490c66 = () => interopDefault(import('..\\pages\\login.vue' /* webpackChunkName: "pages/login" */))
+const _ee8e0ae0 = () => interopDefault(import('..\\pages\\minor_ranking.vue' /* webpackChunkName: "pages/minor_ranking" */))
+const _0e198d6c = () => interopDefault(import('..\\pages\\post.vue' /* webpackChunkName: "pages/post" */))
+const _6db99d73 = () => interopDefault(import('..\\pages\\put.vue' /* webpackChunkName: "pages/put" */))
+const _1033d6b6 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
 
 const emptyFn = () => {}
 
@@ -25,31 +26,35 @@ export const routerOptions = {
 
   routes: [{
     path: "/get",
-    component: _632a810a,
+    component: _7653fe3a,
     name: "get"
   }, {
     path: "/get_tasks",
-    component: _0e0b6299,
+    component: _96e3886e,
     name: "get_tasks"
   }, {
     path: "/inspire",
-    component: _17fd948e,
+    component: _52c4f9be,
     name: "inspire"
   }, {
     path: "/login",
-    component: _29c6eec6,
+    component: _4c490c66,
     name: "login"
   }, {
+    path: "/minor_ranking",
+    component: _ee8e0ae0,
+    name: "minor_ranking"
+  }, {
     path: "/post",
-    component: _87d936c8,
+    component: _0e198d6c,
     name: "post"
   }, {
     path: "/put",
-    component: _5a902043,
+    component: _6db99d73,
     name: "put"
   }, {
     path: "/",
-    component: _2174e586,
+    component: _1033d6b6,
     name: "index"
   }],
 
