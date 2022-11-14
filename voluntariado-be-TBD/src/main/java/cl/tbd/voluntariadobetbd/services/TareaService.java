@@ -27,8 +27,10 @@ public class TareaService {
     @GetMapping()
     public List<Tarea> getAll(@RequestParam(required = false) Integer emergencia){
         if(emergencia != null){
+            System.out.println("tarea funcionanding");
             return taskRepository.getByIdEmergency(emergencia);
         }
+        System.out.println("tarea NOT funcionanding");
         return this.taskRepository.getAllTareas();
     }
 

@@ -2,43 +2,57 @@
   {
     "name": "get",
     "path": "/get",
-    "component": "C:\\\\Users\\\\Alex\\\\Desktop\\\\usach\\\\Semestre 6\\\\Taller de Base de Datos\\\\Lab\\\\voluntariado-TBD\\\\voluntariado-fe-TBD\\\\pages\\\\get.vue",
-    "chunkName": "pages/get"
+    "component": "C:\\\\Users\\\\crisx\\\\Desktop\\\\GitHub\\\\lab2-tbd\\\\voluntariado-fe-TBD\\\\pages\\\\get.vue",
+    "chunkName": "pages/get",
+    "_name": "_7653fe3a"
   },
   {
     "name": "get_tasks",
     "path": "/get_tasks",
-    "component": "C:\\\\Users\\\\Alex\\\\Desktop\\\\usach\\\\Semestre 6\\\\Taller de Base de Datos\\\\Lab\\\\voluntariado-TBD\\\\voluntariado-fe-TBD\\\\pages\\\\get_tasks.vue",
-    "chunkName": "pages/get_tasks"
+    "component": "C:\\\\Users\\\\crisx\\\\Desktop\\\\GitHub\\\\lab2-tbd\\\\voluntariado-fe-TBD\\\\pages\\\\get_tasks.vue",
+    "chunkName": "pages/get_tasks",
+    "_name": "_96e3886e"
   },
   {
     "name": "inspire",
     "path": "/inspire",
-    "component": "C:\\\\Users\\\\Alex\\\\Desktop\\\\usach\\\\Semestre 6\\\\Taller de Base de Datos\\\\Lab\\\\voluntariado-TBD\\\\voluntariado-fe-TBD\\\\pages\\\\inspire.vue",
-    "chunkName": "pages/inspire"
+    "component": "C:\\\\Users\\\\crisx\\\\Desktop\\\\GitHub\\\\lab2-tbd\\\\voluntariado-fe-TBD\\\\pages\\\\inspire.vue",
+    "chunkName": "pages/inspire",
+    "_name": "_52c4f9be"
   },
   {
     "name": "login",
     "path": "/login",
-    "component": "C:\\\\Users\\\\Alex\\\\Desktop\\\\usach\\\\Semestre 6\\\\Taller de Base de Datos\\\\Lab\\\\voluntariado-TBD\\\\voluntariado-fe-TBD\\\\pages\\\\login.vue",
-    "chunkName": "pages/login"
+    "component": "C:\\\\Users\\\\crisx\\\\Desktop\\\\GitHub\\\\lab2-tbd\\\\voluntariado-fe-TBD\\\\pages\\\\login.vue",
+    "chunkName": "pages/login",
+    "_name": "_4c490c66"
+  },
+  {
+    "name": "minor_ranking",
+    "path": "/minor_ranking",
+    "component": "C:\\\\Users\\\\crisx\\\\Desktop\\\\GitHub\\\\lab2-tbd\\\\voluntariado-fe-TBD\\\\pages\\\\minor_ranking.vue",
+    "chunkName": "pages/minor_ranking",
+    "_name": "_ee8e0ae0"
   },
   {
     "name": "post",
     "path": "/post",
-    "component": "C:\\\\Users\\\\Alex\\\\Desktop\\\\usach\\\\Semestre 6\\\\Taller de Base de Datos\\\\Lab\\\\voluntariado-TBD\\\\voluntariado-fe-TBD\\\\pages\\\\post.vue",
-    "chunkName": "pages/post"
+    "component": "C:\\\\Users\\\\crisx\\\\Desktop\\\\GitHub\\\\lab2-tbd\\\\voluntariado-fe-TBD\\\\pages\\\\post.vue",
+    "chunkName": "pages/post",
+    "_name": "_0e198d6c"
   },
   {
     "name": "put",
     "path": "/put",
-    "component": "C:\\\\Users\\\\Alex\\\\Desktop\\\\usach\\\\Semestre 6\\\\Taller de Base de Datos\\\\Lab\\\\voluntariado-TBD\\\\voluntariado-fe-TBD\\\\pages\\\\put.vue",
-    "chunkName": "pages/put"
+    "component": "C:\\\\Users\\\\crisx\\\\Desktop\\\\GitHub\\\\lab2-tbd\\\\voluntariado-fe-TBD\\\\pages\\\\put.vue",
+    "chunkName": "pages/put",
+    "_name": "_6db99d73"
   },
   {
     "name": "index",
     "path": "/",
-    "component": "C:\\\\Users\\\\Alex\\\\Desktop\\\\usach\\\\Semestre 6\\\\Taller de Base de Datos\\\\Lab\\\\voluntariado-TBD\\\\voluntariado-fe-TBD\\\\pages\\\\index.vue",
-    "chunkName": "pages/index"
+    "component": "C:\\\\Users\\\\crisx\\\\Desktop\\\\GitHub\\\\lab2-tbd\\\\voluntariado-fe-TBD\\\\pages\\\\index.vue",
+    "chunkName": "pages/index",
+    "_name": "_1033d6b6"
   }
 ]
