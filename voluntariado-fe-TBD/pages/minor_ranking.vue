@@ -34,7 +34,7 @@
                     <b-container>
                         <b-row>
                             <b-col>
-                                <b-table bordered hover :items="emergencias" :fields="fields1" dark @row-clicked="getTareasByEmergencia(item.id_emergencia)"></b-table>
+                                <b-table bordered hover :items="emergencias" :fields="fields1" dark @row-clicked="getTareasByEmergencia" ></b-table>
                             </b-col>
                             <b-col>
                                 <b-table bordered hover :items="tareas" dark @row-clicked="getTareasByEmergencia()"></b-table>
@@ -74,13 +74,14 @@ export default {
                 console.log(error);
             });
         },
-        getTareasByEmergencia(id) {
+        getTareasByEmergencia(object) {
+            let id = object.id;
             this.$axios.get("http://localhost:8081/tarea", {
                 params: {
                     emergencia: id
                 }
             }).then(response => {
-                console.log(id);
+                
                 this.tareas = response.data;
             })
             .catch(error => {
